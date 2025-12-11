@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Karpet Classic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="style-produk.css">
+  
+</head>
+<body>
+
+    <header class="header">
+        <a href="katalog.html"><i class="fas fa-arrow-left"></i></a> 
+        <h1>Detail Karpet Classic</h1>
+    </header>
+
+    <div class="detail-container">
+        
+        <div class="image-gallery">
+            <img id="mainImage" src="images/bluemos1.jpg" alt="Karpet Classic Utama" class="main-image">
+            
+            <div class="thumbnail-container">
+                <img src="https://via.placeholder.com/100x100/4CAF50/FFFFFF?text=View+1" alt="Tulit 1" class="thumbnail active" onclick="changeImage('https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Karpet+Classic+Utama')">
+                <img src="https://via.placeholder.com/100x100/4CAF50/FFFFFF?text=View+2" alt="Tulit 2" class="thumbnail" onclick="changeImage('https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Detail+Motif')">
+                <img src="https://via.placeholder.com/100x100/4CAF50/FFFFFF?text=View+3" alt="Tulit 3" class="thumbnail" onclick="changeImage('https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Warna+Asli')">
+            </div>
+        </div>
+
+        <div class="product-info-detail">
+            <h2>Karpet bluemoqo</h2>
+            
+            <p style="font-size: 1.1em; color: #777;">Karpet masjid dengan motif klasik minimalis, memberikan kesan mewah dan menawan.</p>
+
+            <span class="price-detail">Rp 450.000 / M</span>
+
+            <h3>Spesifikasi Teknis</h3>
+            <table class="detail-table">
+                <tr>
+                    <th>Ketebalan</th>
+                    <td>13 mm</td>
+                </tr>
+                <tr>
+                    <th>Bahan</th>
+                    <td>Polypropylene Premium</td>
+                </tr>
+                <tr>
+                    <th>Ukuran Standar</th>
+                    <td>2 x 3 meter</td>
+                </tr>
+                <tr>
+                    <th>Warna Tersedia</th>
+                    <td>Merah Maroon, Hijau, Biru Navy</td>
+                </tr>
+                <tr>
+                    <th>Tipe</th>
+                    <td>Lokal / Grade A</td>
+                </tr>
+            </table>
+
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20Karpet%20Classic%20(Rp%20450.000)." target="_blank" class="btn-wa">
+                <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+        </div>
+    </div>
+    
+    <div style="max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+        <h3 style="color: var(--color-text-dark);">Produk Serupa</h3>
+        </div>
+
+    <script>
+        function changeImage(newSrc) {
+            document.getElementById('mainImage').src = newSrc;
+            
+            // Mengganti status aktif thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.getAttribute('onclick').includes(newSrc)) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
